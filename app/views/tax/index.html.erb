@@ -1,0 +1,24 @@
+<%= form_tag('/tax/result') do -%>
+<fieldset>
+  <legend>Enter some info!</legend>
+  <div class="field clearfix">
+    Enter your income: 
+    <div class="input">
+      <%= text_field_tag 'income' %>
+    </div>
+  </div>
+
+  <div class="field clearfix">
+    Joint?
+    <div class="input">
+      <%= check_box_tag 'joint' %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'Calculate', :class => "btn primary" %>
+  </div>
+  
+</fieldset>
+
+<% end -%>

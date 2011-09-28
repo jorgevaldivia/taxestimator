@@ -1,0 +1,16 @@
+<h5>Income : $<%= @income %><br/>Taxable: $<%= @taxable %><br/>Standard deductions/exemptions: $<%= @defaultDeductions %></h5>
+<table class="zebra-striped">
+  <tr>
+    <th>Deductions</th>
+    <th>W2 Tax</th>
+    <th>1099 Tax</th>
+  </tr>
+  <% @taxes.each do |tax| %>
+  <tr>
+    <td>$<%= tax["deductibles"]; %></td>
+    <td>$<%= tax["w2tax"]; %></td>
+    <td>$<%= tax["1099tax"]; %></td>
+  </tr>
+  <% end %>
+</table>
+
